@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Cloud Foundry Automation
+  profiles:
+    active: local
+//debug: true
+---
+spring:
+  profiles: local
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_cloudfoundry
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
